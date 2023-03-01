@@ -88,6 +88,9 @@ protected:
 
         FT mesh_area_np = PMP::area(m_Mesh, CGAL::parameters::geom_traits(Kernel()));
         std::cout << "mesh area (NP) = " << mesh_area_np << std::endl;
+
+        auto center = PMP::centroid(m_Mesh);
+        std::cout << "mesh center of mass = " << center << std::endl;
     }
     void _computeBorderLength()
     {
